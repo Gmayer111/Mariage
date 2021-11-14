@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue !{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="img-head d-flex justify-content-center">
+        <div class="col-8 align-self-center">
+            <p class="text-center save">NGOC MY & GAEL</p>
+        </div>
+    </div>
+</div>
+
+<main>
+    <section>
+        <div class="row mb-3 mt-2">
+            <div class="col-md-3 text-center">
+                <picture>
+                    <img class="floral-img flo-img-left" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+            <div class="col-6 flex-column align-content-around align-self-center">
+                <div>
+                    <p class="text-center mt-4 date">23 Avril 2022</p>
+                </div>
+                <h2 class="text-center mt-5">Nous allons nous marier !</h2>
+            </div>
+            <div class="col-md-3">
+                <picture>
+                    <img class="floral-img flo-img-right" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row d-flex justify-content-center">
+            <div class="col-7">
+
+                <p class="text-center">En attendant le grand jour, vous trouverez sur ce site quelques informations utiles afin de vous préparer à partager ce beau jour avec nous. </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="numbers row d-flex justify-content-center mb-5" id="countdown" data-time="2022-04-23T20:26:36+0000">
+            <div class="col-1 bloc">
+                <strong id="days"></strong>
+                <em>Jours</em>
+            </div>
+            <div class="col-1 bloc">
+                <strong id="hours"></strong>
+                <em>Heures</em>
+            </div>
+            <div class="col-1 bloc last">
+                <strong id="minutes"></strong>
+                <em>Minutes</em>
+            </div>
+            <div class="col-1 bloc last">
+                <strong id="seconds"></strong>
+                <em>Secondes</em>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sondage{% endblock %}
+
+{% block body %}
+<div class="img-head row d-flex justify-content-center"></div>
+<div class="container mb-4">
+    <h1 class="mb-5 mt-3 text-center">Participe à la playlist !</h1>
+
+    {{ form_start(form) }}
+    <div class="form-control d-flex flex-column justify-content-center align-items-center survey">
+        {{ form_label(form.firstname) }}
+        {{ form_widget(form.firstname) }}
+        {{ form_label(form.lastname) }}
+        {{ form_widget(form.lastname) }}
+        {{ form_label(form.artist) }}
+        {{ form_widget(form.artist) }}
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title) }}
+        {{ form_label(form.comment) }}
+        {{ form_widget(form.comment) }}
+        <input type="submit" id="btn" value="Confirmer" class="btn btn-primary mt-3">
+    </div>
+    {{ form_end(form) }}
+
+</div>
+{% endblock %}

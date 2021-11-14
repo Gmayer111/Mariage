@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réception{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="img-reception d-flex justify-content-center">
+        <div class="col-7 align-self-center">
+            <p class="text-center save"></p>
+        </div>
+    </div>
+</div>
+
+<main>
+    <section>
+        <div class="row mb-3 mt-2">
+            <div class="col-3 text-center">
+                <picture>
+                    <img class="floral-img flo-img-left" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+            <div class="col-6 flex-column align-content-around align-self-center">
+                <div>
+                    <p class="text-center mt-4 date">Lieu de réception</p>
+                </div>
+            </div>
+            <div class="flo-col col-3">
+                <picture>
+                    <img class="floral-img flo-img-right" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <h1 class="text-center">Plan d'accès</h1>
+        </div>
+        <div class="row d-flex justify-content-center m-3">
+            <div class="col-11 access p-4">
+                <h3 class="text-center">Comment venir depuis l'autoroute A6</h3>
+                <p class="text-center">De Paris :</p><br>
+                <p class="text-center">Sortie n°16 : COULOMMIERS / CRECY LA CHAPELLE / ESBLY (environ 1km après le péage).<br>
+                    Au rond-point, prendre la 2nde sortie, direction CRECY LA CHAPELLE (n°34).<br>
+                    Dans CRECY LA CHAPELLE, tourner à gauche après le 3eme feu tricolore en direction de LA FERTE SOUS JOUARRE / LA HAUTE MAISON (D 21).<br>
+                    Au rond-point, prendre la 2nde sortie direction LA FERTE SOUS JOUARRE / LA HAUTE MAISON (D 21).<br>
+                    Une fois dans LA HAUTE MAISON, tourner à droite après la Mairie, devant l’indication « La Ferme de la Petite Loge ».<br>
+                    Continuer sur environ 1 km puis tourner à droite après le hangar agricole.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row d-flex justify-content-center">
+            <div class="col-8">
+                <picture>
+                    <img class="w-100 h-100" src="{{ asset('Images/maps.png') }}" alt="Plan d'accès">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="text-center m-4">Hébergements</h2>
+        <div class="row d-flex justify-content-center m-3">
+            <div class="col-11 access p-4">
+                <div class="row">
+                    <h3 class="text-center">La ferme dispose de plusieurs chambres, toutes équipées d’une baignoire, d’un WC et d’un lavabo</h3>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li>Chambre 1 ou 2 personnes (75,00 €*)</li>
+                            <li>Chambre 3 personnes (90,00 €*)</li>
+                            <li>Chambre 4 personnes (105,00 €*)</li>
+                            <li>Un dortoir de 6 personnes (135,00 €*)</li>
+                            <li>Un dortoir de 7 personnes (150,00 €*)</li>
+                        </ul>
+                        <p>*Le petit-déjeuner est inclus dans le prix de la chambre et composé
+                            de mini-viennoiseries, pain, beurre, confitures, mini-crêpes, yaourts
+                            de la « Ferme de Mauperthuis », céréales, fromage, œufs, thé, café,
+                            chocolat chaud et jus d’orange.
+                            Petit-déjeuner supplémentaire : 9,00€/personne
+                            Le linge de toilette est fourni.
+                        </p>
+                        <p><strong>Vous pouvez télécharger le bon de réservation içi : </strong></p><a class="text-warning" href="{{ asset('pdf/voucher.pdf') }}">Bon de réservation</a>
+                    </div>
+                    <div class="col-5">
+                        <picture>
+                            <img class="w-100 h-100" src="{{ asset('Images/chambre.jpg') }}" alt="Photo d'une chambre">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row d-flex justify-content-center m-3 list mb-3">
+            <div class="col-11 access p-4 mb-5">
+                <h3 class="text-center">Voici une liste d'hébergements proches de la ferme</h3>
+                <ul class="text-center">
+                    <li><a class="text-warning"  href="{{ asset('http://www.le-moulin-de-pommeuse.com/') }}" target="_blank">Le moulin de Pommeuse</a></li>
+                    <li><a class="text-warning"  href="{{ asset('https://www.domainedecrecy.com/') }}" target="_blank">Le domaine de Crécy</a></li>
+                    <li><a class="text-warning"  href="{{ asset('https://www.chateaudepommeuse.fr/chambres-hotes/chateau/') }}" target="_blank">Le château de Pommeuse</a></li>
+                    <li><a class="text-warning"  href="{{ asset('https://www.airbnb.fr/s/La-Haute~Maison--France/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_dates%5B%5D=december&flexible_trip_dates%5B%5D=november&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=calendar&query=La%20Haute-Maison%2C%20France&place_id=ChIJQbAB7Cq76EcRQFiMaMOCCwQ&checkin=2022-04-23&checkout=2022-04-24&source=structured_search_input_header&search_type=user_map_move&ne_lat=48.893707508972554&ne_lng=3.037155413981395&sw_lat=48.83973124995548&sw_lng=2.9543116376547687&zoom=13&search_by_map=true') }}" target="_blank">Air Bnb</a></li>
+                </ul>
+                <p class="text-center">Vous trouverez également plusieurs hôtels à Meaux et Coulommiers.</p>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
