@@ -13,6 +13,8 @@ class SurveyController extends AbstractController
 {
     /**
      * @Route("/sondage", name="sondage")
+     * @param Request $request
+     * @return Response
      */
     public function addMusic(Request $request): Response
     {
@@ -20,10 +22,14 @@ class SurveyController extends AbstractController
         $form = $this->createForm(SurveyFormType::class, $music);
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($music);
             $em->flush();
+
+            $this->addFlash('success', 'Merci de ta participation :-)');
+
+            return $this->redirectToRoute('sondage');
         }
         return $this->render('survey/index.html.twig', [
             'form' => $form->createView()]);

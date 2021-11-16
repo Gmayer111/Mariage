@@ -1,6 +1,8 @@
-$dark : #2f3542;
-@import "/Applications/MAMP/apps/Mariage/node_modules/bootstrap/scss/bootstrap.scss";
+//@import "/Applications/MAMP/apps/Mariage/node_modules/bootstrap/scss/bootstrap.scss";
 
+$dark : #2f3542;
+
+@import "~bootstrap/scss/bootstrap";
 
 html {
   height: 100vh;
@@ -15,6 +17,7 @@ body {
   margin: 0;
   font-family: "Garamond", serif;
   -moz-box-sizing: border-box; box-sizing: border-box;
+  background-color: #f7f1e3;
   min-height: 100%;
   position: relative;
   padding-bottom: 63px;
@@ -91,6 +94,7 @@ body {
   -webkit-box-shadow: 1px 1px 1px 1px rgba(68, 150, 210, 0.5);
   box-shadow: 1px 1px 1px 1px rgba(68, 150, 210, 0.5);
   font-size: 1.5em;
+  background-color: lightcyan;
 }
 
 
@@ -115,9 +119,10 @@ span {
 }
 
 .access {
-  background: rgb(223,20,20);
-  background: linear-gradient(86deg, rgba(223,20,20,1) 0%, rgba(222,123,42,1) 49%, rgba(231,179,22,1) 100%);
-  color: #bc5f5f;
+  color: #130f40;
+  background-color: #ffbe76;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .list div ul li {
@@ -125,13 +130,13 @@ span {
 }
 
 footer {
-   font-family: Garamond, serif;
-   text-align: center;
-   color: #a50f0f;
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   padding: 10px;
-   height: 50px;
- }
+  font-family: Garamond, serif;
+  text-align: center;
+  color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  height: 50px;
+}

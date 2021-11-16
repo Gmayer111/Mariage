@@ -5,8 +5,10 @@
 {% block body %}
 <div class="row">
     <div class="img-head d-flex justify-content-center">
-        <div class="col-8 align-self-center">
-            <p class="text-center save">NGOC MY & GAEL</p>
+        <div class="row">
+            <div class="col-0 col-md-12 align-self-center">
+                <p class="text-center save p-2">NGOC MY & GAEL</p>
+            </div>
         </div>
     </div>
 </div>
@@ -14,19 +16,23 @@
 <main>
     <section>
         <div class="row mb-3 mt-2">
-            <div class="col-md-3 text-center">
-                <picture>
+            <div class="col-0 col-md-3 text-center">
+                <picture class="d-none d-md-block">
                     <img class="floral-img flo-img-left" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
                 </picture>
             </div>
-            <div class="col-6 flex-column align-content-around align-self-center">
+            <div class="col-12 col-md-6 flex-column align-content-around align-self-center">
+                <div>
+                    <p class="text-center date">SAVE THE DATE</p>
+                </div>
                 <div>
                     <p class="text-center mt-4 date">23 Avril 2022</p>
                 </div>
                 <h2 class="text-center mt-5">Nous allons nous marier !</h2>
+                <h3 class="text-center"><i>We are getting married !</i></h3>
             </div>
-            <div class="col-md-3">
-                <picture>
+            <div class="col-0 col-md-3">
+                <picture class="d-none d-md-block">
                     <img class="floral-img flo-img-right" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
                 </picture>
             </div>
@@ -42,19 +48,19 @@
     </section>
     <section>
         <div class="numbers row d-flex justify-content-center mb-5" id="countdown" data-time="2022-04-23T20:26:36+0000">
-            <div class="col-1 bloc">
+            <div class="col-3 col-md-1 bloc">
                 <strong id="days"></strong>
                 <em>Jours</em>
             </div>
-            <div class="col-1 bloc">
+            <div class="col-3 col-md-1 bloc">
                 <strong id="hours"></strong>
                 <em>Heures</em>
             </div>
-            <div class="col-1 bloc last">
+            <div class="col-3 col-md-1 bloc last">
                 <strong id="minutes"></strong>
                 <em>Minutes</em>
             </div>
-            <div class="col-1 bloc last">
+            <div class="col-3 col-md-1 bloc last">
                 <strong id="seconds"></strong>
                 <em>Secondes</em>
             </div>

@@ -3,25 +3,57 @@
 {% block title %}Sondage{% endblock %}
 
 {% block body %}
-<div class="img-head row d-flex justify-content-center"></div>
-<div class="container mb-4">
-    <h1 class="mb-5 mt-3 text-center">Participe à la playlist !</h1>
+    <div class="img-head row d-flex justify-content-center d-none d-md-block"></div>
+    <section>
+        <div class="row mb-3 mt-2">
+            <div class="col-3 text-center">
+                <picture class="d-none d-md-block">
+                    <img class="floral-img flo-img-left" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+            <div class="col-12 col-md-6 flex-column align-content-around align-self-center">
+                <div>
+                    <p class="text-center mt-4 date"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                            <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                            <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
+                            <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
+                        </svg> Participe à la playlist <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                            <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                            <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
+                            <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
+                        </svg></p>
+                    <p class="text-center mt-1 fs-4"><i>Join the playlist !</i><i class="bi bi-music-note-beamed"></i></p>
+                </div>
+            </div>
+            <div class="flo-col col-3">
+                <picture class="d-none d-md-block">
+                    <img class="floral-img flo-img-right" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mb-4">
 
-    {{ form_start(form) }}
-    <div class="form-control d-flex flex-column justify-content-center align-items-center survey">
-        {{ form_label(form.firstname) }}
-        {{ form_widget(form.firstname) }}
-        {{ form_label(form.lastname) }}
-        {{ form_widget(form.lastname) }}
-        {{ form_label(form.artist) }}
-        {{ form_widget(form.artist) }}
-        {{ form_label(form.title) }}
-        {{ form_widget(form.title) }}
-        {{ form_label(form.comment) }}
-        {{ form_widget(form.comment) }}
-        <input type="submit" id="btn" value="Confirmer" class="btn btn-primary mt-3">
-    </div>
-    {{ form_end(form) }}
-
-</div>
+            {{ form_start(form)}}
+            <div class="form-control d-flex flex-column justify-content-center align-items-center survey">
+                {{ form_label(form.firstname) }}
+                {{ form_widget(form.firstname, {'attr': {'value': ''}})  }}
+                {{ form_label(form.lastname) }}
+                {{ form_widget(form.lastname, {'attr': {'value': ''}}) }}
+                {{ form_label(form.artist) }}
+                {{ form_widget(form.artist, {'attr': {'value': ''}})  }}
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title, {'attr': {'value': ''}})  }}
+                <div class="mt-2 text-center">
+                    {{ form_label(form.comment) }}
+                    <div class="mt-2">
+                        {{ form_widget(form.comment, {'attr': {'value': ''}})  }}
+                    </div>
+                </div>
+                <input type="submit" id="conf" value="Confirmer" class="btn btn-primary mt-3">
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
 {% endblock %}

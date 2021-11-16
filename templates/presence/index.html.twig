@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présence{% endblock %}
+
+{% block body %}
+<main>
+    <div class="img-head row d-flex justify-content-center d-none d-md-block"></div>
+    <section>
+        <div class="row mb-3 mt-2">
+            <div class="col-2 text-center">
+                <picture class="d-none d-md-block">
+                    <img class="floral-img flo-img-left" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+            <div class="col-12 col-md-8 flex-column align-content-around align-self-center">
+                <div>
+                    <p class="text-center mt-4 date">Confirmez votre présence !</p>
+                    <p class="text-center mt-1 fs-4"><i>Confirm your attendance !</i></p>
+                </div>
+            </div>
+            <div class="flo-col col-2">
+                <picture class="d-none d-md-block">
+                    <img class="floral-img flo-img-right" src="{{ asset('Images/floral.png') }}" alt="Image transparente">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mb-4">
+
+            {{ form_start(form)}}
+            <div class="form-control d-flex flex-column justify-content-center align-items-center survey">
+                {{ form_label(form.firstname) }}
+                {{ form_widget(form.firstname, {'attr': {'value': ''}})  }}
+                {{ form_label(form.lastname) }}
+                {{ form_widget(form.lastname, {'attr': {'value': ''}}) }}
+                {{ form_label(form.isPresent, 'Présence / Attendance') }}
+                {{ form_widget(form.isPresent) }}
+                <div class="mt-2 text-center">
+                    {{ form_label(form.comment) }}
+                    {{ form_widget(form.comment, {'attr': {'value': ''}})  }}
+                </div>
+
+                <input type="submit" id="conf" value="Confirmer" class="btn btn-primary mt-3">
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
+</main>
+{% endblock %}
